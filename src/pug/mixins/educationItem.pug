@@ -1,0 +1,8 @@
+mixin educationItem(data)
+	.education-item
+		.education-item__image
+			img(src=`${baseDir}images/${data.image}.svg` alt="")
+		.education-item__position!= data.position
+		.education-item__place
+			each place in data.studyPlace
+				.education-item-place__name!= place.name

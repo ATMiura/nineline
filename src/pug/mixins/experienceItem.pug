@@ -1,0 +1,24 @@
+mixin experienceItem(data)
+	.experience-item
+		.experience-item__date= data.date
+
+		.experience-item__position
+			.experience-item-position__text= data.position
+			.experience-item-position__skill-icons
+				.experience-item-position__skill-icon
+
+		.experience-item-company
+			if data.companyLogo
+				.experience-item-company__logo
+					span(class=`sprite-`+data.companyLogo)
+			.experience-item-company__info
+				.experience-item-company__name= data.companyName
+				.experience-item-company__description= data.companyDescription
+
+		.experience-item__description!= data.experienceDescription
+
+		if data.experienceLinks
+			.experience-item__links
+				each link in data.experienceLinks
+					a.experience-item__link(href='#')= link.linkText
+

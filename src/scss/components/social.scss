@@ -1,0 +1,19 @@
+.social {
+	display: flex;
+
+	&__button {
+		border: 0;
+		padding: 0;
+		box-shadow: none;
+		background: transparent;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	svg {
+		width: 25px;
+		height: 25px;
+	}
+}

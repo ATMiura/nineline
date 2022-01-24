@@ -1,0 +1,128 @@
+$sprites: (
+	"21vek": (
+		normal: (
+			x: 152,
+			y: 290,
+			width: 30,
+			height: 30,
+			image: "sprites.png",
+			total_width: 512,
+			total_height: 440,
+		),
+		retina: (
+			x: 304,
+			y: 580,
+			width: 60,
+			height: 60,
+			image: "sprites@2x.png",
+			total_width: 1024,
+			total_height: 880,
+		),
+	),
+	"Integral": (
+		normal: (
+			x: 184,
+			y: 290,
+			width: 30,
+			height: 30,
+			image: "sprites.png",
+			total_width: 512,
+			total_height: 440,
+		),
+		retina: (
+			x: 368,
+			y: 580,
+			width: 60,
+			height: 60,
+			image: "sprites@2x.png",
+			total_width: 1024,
+			total_height: 880,
+		),
+	),
+	"hands": (
+		normal: (
+			x: 0,
+			y: 0,
+			width: 512,
+			height: 288,
+			image: "sprites.png",
+			total_width: 512,
+			total_height: 440,
+		),
+		retina: (
+			x: 0,
+			y: 0,
+			width: 1024,
+			height: 576,
+			image: "sprites@2x.png",
+			total_width: 1024,
+			total_height: 880,
+		),
+	),
+	"jcs": (
+		normal: (
+			x: 216,
+			y: 290,
+			width: 30,
+			height: 30,
+			image: "sprites.png",
+			total_width: 512,
+			total_height: 440,
+		),
+		retina: (
+			x: 432,
+			y: 580,
+			width: 60,
+			height: 60,
+			image: "sprites@2x.png",
+			total_width: 1024,
+			total_height: 880,
+		),
+	),
+	"logo": (
+		normal: (
+			x: 0,
+			y: 290,
+			width: 150,
+			height: 150,
+			image: "sprites.png",
+			total_width: 512,
+			total_height: 440,
+		),
+		retina: (
+			x: 0,
+			y: 580,
+			width: 300,
+			height: 300,
+			image: "sprites@2x.png",
+			total_width: 1024,
+			total_height: 880,
+		),
+	),
+	"oz": (
+		normal: (
+			x: 248,
+			y: 290,
+			width: 30,
+			height: 30,
+			image: "sprites.png",
+			total_width: 512,
+			total_height: 440,
+		),
+		retina: (
+			x: 496,
+			y: 580,
+			width: 60,
+			height: 60,
+			image: "sprites@2x.png",
+			total_width: 1024,
+			total_height: 880,
+		),
+	),
+);
+
+@each $name in map-keys($sprites) {
+	.sprite-#{$name} {
+		@include sprite($name);
+	}
+}

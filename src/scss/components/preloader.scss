@@ -1,0 +1,17 @@
+$ninelines-preloader-background-color: #fff !default;
+
+.preloader {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background-color: $ninelines-preloader-background-color;
+
+	&__image {
+		position: absolute;
+		right: 100%;
+		top: 100%;
+	}
+}

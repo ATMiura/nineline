@@ -1,0 +1,16 @@
+header.header
+	nav.header__menu
+		each object, key in data.header.menu
+			- var activeFirstElement = ( key == 0) ? 'header__link js-to-anchor is-active' : 'header__link js-to-anchor'
+			a(
+				href=object.url
+				data-link=key
+				class=activeFirstElement
+			)
+				!= object.name
+
+
+	button.header__burger.btn.js-burger(type="button")
+		span
+		span
+		span

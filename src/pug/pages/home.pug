@@ -1,0 +1,96 @@
+main.home
+	.container
+
+		.banner#resume
+			+lazyPicture({
+				src: `${baseDir}images/logo.png`,
+				alt: 'Логотип',
+			}).banner__logo
+
+			.candidate
+				.candidate__info
+					.candidate__name
+						h1.h1
+							| Имя кандидата,
+							br
+							| Желаемая позиция
+					.candidate__description
+						| Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса.
+						| Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя.
+						| Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.
+
+				.candidate__contacts
+					.contacts
+						a.contacts__link(href="mailto:mail@gmail.com") mail@gmail.com
+						a.contacts__link(href="tel:+7 (999) 000-00-00") +7 (999) 000-00-00
+						.contacts__city г. Иннополис
+					.social
+						button.social__button(type='button' data-social='facebook')
+							+svg('fb')
+						button.social__button(type='button' data-social='vk')
+							+svg('vk')
+						button.social__button(type='button' data-social='telegram')
+							+svg('tg')
+
+		.resume-wrapper
+			.lines
+				.line-item
+					svg(width='1155' height='363' viewBox='0 0 1155 363' fill='none' xmlns='http://www.w3.org/2000/svg').line-1
+						path(fill-rule='evenodd' clip-rule='evenodd' d='M697.225 360.408C608.701 353.055 524.668 331.719 474.771 318.538C464.09 315.717 451.203 312.198 436.608 308.213C382.663 293.485 305.379 272.385 229.905 256.558C181.971 246.506 135.134 238.664 95.7844 235.928C76.1097 234.56 58.5446 234.487 43.7819 235.978C28.8857 237.484 17.5776 240.516 9.9032 244.833L0.0968018 227.402C11.2037 221.154 25.6271 217.711 41.7709 216.08C58.0481 214.435 76.8312 214.562 97.1716 215.976C137.852 218.805 185.712 226.855 234.01 236.984C310.153 252.951 388.295 274.288 442.219 289.012C456.683 292.961 469.405 296.435 479.879 299.201C529.653 312.35 612.235 333.279 698.88 340.477C785.885 347.704 874.996 340.889 939.104 300.414C1003.69 259.634 1052.82 185.185 1086.01 119.715C1102.51 87.1581 1114.89 57.1917 1123.14 35.3694C1127.26 24.4641 1130.34 15.6076 1132.39 9.49695C1133.42 6.44202 1134.18 4.07452 1134.69 2.48169C1134.94 1.6853 1135.13 1.08267 1135.25 0.684723C1135.31 0.485748 1135.36 0.337921 1135.39 0.242676L1135.42 0.139374L1135.43 0.114227C1135.43 0.114655 1135.42 0.115906 1145 3.00003C1154.58 5.88416 1154.57 5.88712 1154.57 5.8909L1154.57 5.90271L1154.56 5.94141L1154.52 6.07889C1154.48 6.19705 1154.43 6.36801 1154.36 6.59039C1154.22 7.03519 1154.02 7.68573 1153.75 8.53113C1153.21 10.2218 1152.42 12.6922 1151.36 15.8546C1149.23 22.1786 1146.07 31.2747 1141.84 42.4406C1133.41 64.761 1120.75 95.4125 1103.85 128.757C1070.23 195.089 1019.08 273.575 949.781 317.326C880.002 361.381 785.389 367.731 697.225 360.408Z' fill='url(#paint0_linear_14999_30)')
+						defs
+							lineargradient#paint0_linear_14999_30(x1='1165.36' y1='159.209' x2='4.25641' y2='160.007' gradientUnits='userSpaceOnUse')
+								stop(offset='0' stop-color='#FCDED1' stop-opacity='0.3')
+									animate(attributeName='stop-color' values='#FCDED1; #fff; #FCDED1' dur='4s' repeatCount='indefinite')
+								stop(offset='0.217132' stop-color='#FCDED1' stop-opacity='0')
+									animate(attributeName='stop-color' values='#fff; #FCDED1; #fff' dur='4s' repeatCount='indefinite')
+								stop(offset='0.721638' stop-color='#FCDED1' stop-opacity='0')
+									animate(attributeName='stop-color' values='#fff; #FCDED1; #fff' dur='4s' repeatCount='indefinite')
+								stop(offset='0.99131' stop-color='#FCDED1' stop-opacity='0.5')
+									animate(attributeName='stop-color' values='#FCDED1; #fff; #FCDED1' dur='4s' repeatCount='indefinite')
+
+				.line-item
+					svg(width='1155' height='363' viewBox='0 0 1155 363' fill='none' xmlns='http://www.w3.org/2000/svg').line-2
+						path(d='M1145.1 118.167C1137.42 122.484 1126.11 125.516 1111.22 127.022C1096.46 128.513 1078.89 128.44 1059.22 127.072C1019.87 124.336 973.029 116.494 925.095 106.442C829.2 86.3327 730.384 57.7108 680.229 44.4619L675.121 63.7986C724.638 76.879 824.422 105.766 920.99 126.016C969.288 136.145 1017.15 144.195 1057.83 147.024C1078.17 148.438 1096.95 148.565 1113.23 146.92C1129.37 145.289 1143.8 141.846 1154.9 135.598L1145.1 118.167ZM680.229 44.4619C630.332 31.281 546.299 9.94523 457.775 2.59203C369.611 -4.73133 274.998 1.61868 205.219 45.6745L215.896 62.586C280.004 22.111 369.115 15.2964 456.12 22.5234C542.765 29.7206 625.347 50.6503 675.121 63.7986L680.229 44.4619ZM205.219 45.6745C135.923 89.4253 84.773 167.911 51.1514 234.243C34.25 267.588 21.5915 298.239 13.1551 320.559C8.93468 331.725 5.76522 340.821 3.64493 347.145C2.58466 350.308 1.78636 352.778 1.24984 354.469C0.981569 355.314 0.778711 355.965 0.641245 356.41C0.57251 356.632 0.52012 356.803 0.484071 356.921C0.466046 356.98 0.452106 357.026 0.442251 357.059C0.437325 357.075 0.433417 357.088 0.430532 357.097C0.42909 357.102 0.427691 357.107 0.42697 357.109C0.425828 357.113 0.424939 357.116 10 360C19.5751 362.884 19.5747 362.885 19.5746 362.886C19.5749 362.885 19.575 362.884 19.5756 362.882C19.5768 362.879 19.579 362.871 19.5822 362.861C19.5886 362.839 19.5991 362.805 19.6136 362.757C19.6427 362.662 19.6879 362.514 19.7494 362.315C19.8724 361.917 20.0603 361.315 20.313 360.518C20.8185 358.926 21.5833 356.558 22.6075 353.503C24.6563 347.392 27.7414 338.536 31.8633 327.631C40.1115 305.808 52.4886 275.842 68.9906 243.285C102.176 177.815 151.305 103.366 215.896 62.586L205.219 45.6745Z' fill='url(#paint0_linear_21_11)')
+						defs
+							lineargradient#paint0_linear_21_11(x1='-10.3566' y1='203.791' x2='1150.74' y2='202.993' gradientUnits='userSpaceOnUse')
+								stop(offset='0.0833333' stop-color='#FCDED1' stop-opacity='0')
+									animate(attributeName='stop-color' values='#fff; #FCDED1; #fff' dur='4s' repeatCount='indefinite')
+								stop(offset='0.322917' stop-color='#FCDED1' stop-opacity='0.6')
+									animate(attributeName='stop-color' values='#FCDED1; #fff; #FCDED1' dur='4s' repeatCount='indefinite')
+								stop(offset='0.713542' stop-color='#FCDED1' stop-opacity='0')
+									animate(attributeName='stop-color' values='#fff; #FCDED1; #fff' dur='4s' repeatCount='indefinite')
+								stop(offset='0.911458' stop-color='#FCDED1' stop-opacity='0.2')
+									animate(attributeName='stop-color' values='#FCDED1; #fff; #FCDED1' dur='4s' repeatCount='indefinite')
+
+			.resume-row#about
+				.resume-block.resume-experience
+					.block__head
+						h2.h2 Опыт работы
+					.block___body
+						.experience-list
+							each object in data.experience
+								+experienceItem(object)
+
+				.resume-personage
+					+lazyPicture({
+						src: `${baseDir}images/personage.png`,
+						alt: 'Персонаж',
+					}).resume-personage__picture
+
+				.resume-block.resume-education
+					.block__head
+						h2.h2 Образование
+					.block___body
+						.education-list
+							each object in data.education
+								+educationItem(object)
+
+			.resume-row#skills
+				.resume-block.resume-skills
+					.block__head
+						h2.h2 Навыки
+					.block__body
+						.skill-list
+							each object in data.skills
+								+skillItem(object)
+
