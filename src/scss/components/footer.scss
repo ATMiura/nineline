@@ -2,10 +2,14 @@
 	display: flex;
 	justify-content: center;
 	margin-top: auto;
-	padding: 100px 0 50px;
+	padding: 12px 0 40px;
 	width: 100%;
 
-	@media (max-width: 1024px) {
-		padding: 12px 0 40px;
+	img {
+		display: block;
+	}
+
+	@include desktop() {
+		padding: 100px 0 50px;
 	}
 }

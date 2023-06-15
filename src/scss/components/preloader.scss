@@ -14,4 +14,9 @@ $ninelines-preloader-background-color: #fff !default;
 		right: 100%;
 		top: 100%;
 	}
+
+	img:not(.preloader__image) {
+		opacity: 0;
+		visibility: hidden;
+	}
 }

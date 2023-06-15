@@ -10,7 +10,7 @@ mixin experienceItem(data)
 		.experience-item-company
 			if data.companyLogo
 				.experience-item-company__logo
-					span(class=`sprite-`+data.companyLogo)
+					span(class=`sprite-` + data.companyLogo)
 			.experience-item-company__info
 				.experience-item-company__name= data.companyName
 				.experience-item-company__description= data.companyDescription
@@ -20,5 +20,4 @@ mixin experienceItem(data)
 		if data.experienceLinks
 			.experience-item__links
 				each link in data.experienceLinks
-					a.experience-item__link(href='#')= link.linkText
-
+					a.experience-item__link(href="#")= link.linkText

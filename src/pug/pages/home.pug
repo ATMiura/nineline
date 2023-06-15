@@ -1,4 +1,4 @@
-main.home
+main.home(data-scroll-section)
 	.container
 
 		.banner#resume
@@ -11,9 +11,9 @@ main.home
 				.candidate__info
 					.candidate__name
 						h1.h1
-							| Имя кандидата,
+							| Алексей Марченко,
 							br
-							| Желаемая позиция
+							| HTML-верстальщик, <br> Frontend Middle в будущем
 					.candidate__description
 						| Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса.
 						| Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя.
@@ -71,7 +71,7 @@ main.home
 							each object in data.experience
 								+experienceItem(object)
 
-				.resume-personage
+				.resume-personage(data-scroll data-scroll-sticky data-scroll-target="#about")
 					+lazyPicture({
 						src: `${baseDir}images/personage.png`,
 						alt: 'Персонаж',

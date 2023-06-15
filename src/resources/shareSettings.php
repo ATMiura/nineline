@@ -2,18 +2,17 @@
 
 $protocol = $_SERVER['PROTOCOL'] = isset($_SERVER['HTTPS']) && !empty($_SERVER['HTTPS']) ? 'https' : 'http';
 $host = $protocol . '://' . $_SERVER['HTTP_HOST'];
-$title = '';
-$description = '';
-$image = $host . '/images/';
+$title = 'Базовый заголовок страницы';
+$description = 'Базовое описание страницы';
+$image = $host . '/images/share/main.jpg';
 
-// Uncomment the code below and fill in the pages if necessary
-// $pages = [
-// 	'/page/1' => [
-// 		'title' => '',
-// 		'description' => '',
-// 		'image' => '/images/',
-// 	],
-// ];
+$pages = [
+	'/' => [
+		'title' => 'Главная страница',
+		'description' => 'Описание главной страницы',
+		'image' => '/images/share/personage.jpg',
+	],
+];
 
 $page = @$pages[$_SERVER['REQUEST_URI']];
 
