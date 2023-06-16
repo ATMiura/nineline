@@ -1,0 +1,26 @@
+.btn-up {
+	position: fixed;
+	z-index: 10;
+	right: 20px;
+	bottom: 20px;
+	width: 30px;
+	height: 30px;
+	pointer-events: none;
+	opacity: 0;
+	background: #fff;
+	border-radius: 100%;
+	box-shadow: none;
+	padding: 0;
+	border: 0;
+
+	@include desktop() {
+		right: 25px;
+		width: 48px;
+		height: 48px;
+	}
+
+	&._visible {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}

@@ -5,16 +5,23 @@ import LocomotiveScroll from 'locomotive-scroll';
 
 gsap.registerPlugin(ScrollTrigger);
 
+let scrollContainer = document.querySelector("[data-scroll-container]");
 const locoScroll = new LocomotiveScroll({
-	el: document.querySelector('[data-scroll-container]'),
+	el: scrollContainer,
 	smooth: true,
 	tablet: { smooth: false },
-	smartphone: { smooth: false }
+	smartphone: { smooth: false },
+	getDirection: true
 });
+imagesLoaded(scrollContainer, { background: true }, function () {
+	locoScroll.update();
+});
+
 locoScroll.on('scroll', (instance) => {
 	ScrollTrigger.update();
 	document.documentElement.setAttribute('data-scrolling', instance.direction);
 });
+
 ScrollTrigger.scrollerProxy('[data-scroll-container]', {
 	scrollTop(value) {
 		return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
@@ -66,7 +73,10 @@ gsap.set(".block__head, .experience-item, .education-item, .skill-item", {opacit
 
 ScrollTrigger.batch(".block__head, .experience-item, .education-item, .skill-item", {
 	scroller: "[data-scroll-container]",
-	onEnter: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15}),
+	onEnter: batch => {
+		gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15})
+		locoScroll.update()
+	},
 	onEnterBack: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15}),
 
 	start: "top 80%",
@@ -74,4 +84,23 @@ ScrollTrigger.batch(".block__head, .experience-item, .education-item, .skill-ite
 	scrub: 1,
 	duration: 1,
 	markers: false,
+});
+
+ScrollTrigger.create({
+	trigger: 'footer',
+	onEnter: () => {
+		console.log('123')
+		document.querySelector('#btn-up').classList.add('_visible')
+	},
+	onLeave: () => {
+		document.querySelector('#btn-up').classList.remove('_visible');
+	}
+})
+
+locoScroll.on('scroll', (position) => {
+	if ((position.scroll.y) > document.body.offsetHeight) {
+		document.querySelector('#btn-up').classList.add('_visible')
+	} else {
+		document.querySelector('#btn-up').classList.remove('_visible');
+	}
 });
