@@ -5,18 +5,19 @@ import LocomotiveScroll from 'locomotive-scroll';
 
 gsap.registerPlugin(ScrollTrigger);
 
-let scrollContainer = document.querySelector("[data-scroll-container]");
 const locoScroll = new LocomotiveScroll({
-	el: scrollContainer,
+	el: document.querySelector('[data-scroll-container]'),
 	smooth: true,
-	tablet: { smooth: false },
-	smartphone: { smooth: false },
+	tablet: {
+		smooth: false,
+		breakpoint: 0,
+	},
+	smartphone: {
+		smooth: false,
+		breakpoint: 0,
+	},
 	getDirection: true
 });
-imagesLoaded(scrollContainer, { background: true }, function () {
-	locoScroll.update();
-});
-
 locoScroll.on('scroll', (instance) => {
 	ScrollTrigger.update();
 	document.documentElement.setAttribute('data-scrolling', instance.direction);
@@ -86,21 +87,21 @@ ScrollTrigger.batch(".block__head, .experience-item, .education-item, .skill-ite
 	markers: false,
 });
 
-ScrollTrigger.create({
-	trigger: 'footer',
-	onEnter: () => {
-		console.log('123')
-		document.querySelector('#btn-up').classList.add('_visible')
-	},
-	onLeave: () => {
-		document.querySelector('#btn-up').classList.remove('_visible');
-	}
-})
+// ScrollTrigger.create({
+// 	trigger: 'footer',
+// 	onEnter: () => {
+// 		console.log('123')
+// 		document.querySelector('#btn-up').classList.add('_visible')
+// 	},
+// 	onLeave: () => {
+// 		document.querySelector('#btn-up').classList.remove('_visible');
+// 	}
+// })
 
-locoScroll.on('scroll', (position) => {
-	if ((position.scroll.y) > document.body.offsetHeight) {
-		document.querySelector('#btn-up').classList.add('_visible')
-	} else {
-		document.querySelector('#btn-up').classList.remove('_visible');
-	}
-});
+// locoScroll.on('scroll', (position) => {
+// 	if ((position.scroll.y) > document.body.offsetHeight) {
+// 		document.querySelector('#btn-up').classList.add('_visible')
+// 	} else {
+// 		document.querySelector('#btn-up').classList.remove('_visible');
+// 	}
+// });
