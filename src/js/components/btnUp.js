@@ -26,12 +26,10 @@ export class BtnUp {
 				if (hasClass) return
 
 				this.btn.classList.add('_visible')
-				window.app.body.classList.add('_btn-up-visible')
 			} else {
 				if (!hasClass) return
 
 				this.btn.classList.remove('_visible')
-				window.app.body.classList.remove('_btn-up-visible')
 			}
 		})
 	}
